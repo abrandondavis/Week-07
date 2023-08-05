@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Required metadata stuff -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey</title>
+</head>
+
+<!-- Meat and bones of the html file -->
+
+<body style="background-color: silver;">
+
+  <div class="container"> <!-- for notes, refer to home index file -->
+    <ul>
+      <li>
+        <a href="/" style="font-size: 32px; font-family: arial, serif; "><strong>Home</strong></a>
+      </li><br />
+      <li>
+        <a href="/gibson/">
+          <img src="/images/Gibson_Logo.svg" alt="Gibson Logo" style="width:80px;height:35px;">
+        </a>
+      </li><br />
+      <li>
+        <a href="/fender/">
+          <img src="/images/fender_logo_black.svg" alt="Gibson Logo" style="width:80px;height:35px;">
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" style="font-size: 32px; font-family: arial, serif; "><strong>Survey</strong></a>
+      </li><br />
+    </ul>
+  </div>
+
+  <form>      <!-- The form gets its very own labeled container -->
+    <div>     <!-- Name input box -->
+      <label>Name</label>
+      <input type="text" placeholder="Name">
+              <!-- text box with title and suggestion/reminder on the desired information -->
+    </div><br>
+    <div>     <!-- A select-one option -->
+      Which do you prefer?
+      <input type="radio" id="gibson" name="guitar" value="Gibson"> <!-- radio type is the select-one -->
+      <label for="gibson">Gibson</label>
+      <input type="radio" id="fender" name="guitar" value="Fender"> <!-- id is to link the label so we don't get survey spaghetti-->
+      <label for="fender">Fender</label>                            <!-- the for label follows back to an id from an input -->
+      <input type="radio" id="nopref" name="guitar" value="None">
+      <label for="no pref">No Preference</label>
+    </div>
+    <div><br>
+      <label>Input</label> <!-- Another text input if the user would like -->
+      <input type="text" placeholder="Additional Comments">
+    </div>
+    <div><br>
+      <input type="submit" value="Submit">
+      <!-- shiny button to tempt peop....ahem, i mean for people to submit their survey-->
+      <!-- This is also the button where some javascript or some other language would come in to do the backbreaking work of delivering mail-->
+      <!-- Or you could leave it as a shiny red button that does nothing, but you got to press it so its fine -->
+    </div>
+  </form>
+
+
+</body>
+
+</html>

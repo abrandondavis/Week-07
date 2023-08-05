@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Assignment Instructions
+
+## Create a website using only HTML. The website can be anything you like (within school guidelines) if it meets the following criteria:
+
+## At least 3 pages with links to navigate between all pages present on each page.
+
+## 2 different size headers, a list, 3 images, a table, and a form.
+-->
+
+
+<!-- Required metadata stuff -->
+
+<head>
+  <!-- UTF-8, meaning Unicode Transformation Format 8 bit, is almost universally used
+  because it causes the least amount of issues when trying to make things
+  international.-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitars</title>
+  <!-- The title of the document which not only shows in the browsing history, but also the tab name in browser -->
+</head>
+
+
+<!--
+########################################################################################
+#                                                                                      #
+# Most comments will be on this page. Enjoy your stay. Ring the bell for room service. #
+#                                                                                      #
+########################################################################################
+-->
+
+<!-- Meat and bones of the html file, <br> tags used for spacing in lieu of CSS-->
+
+<body style="background-color: silver;">  <!-- Main body of html file, colored softer gray because your poor eyes must be tired after grading all the white backgrounds -->
+  <div class="container">  
+    <ul>        <!-- ul for unordered list, used to list links -->
+      <li>      <!-- li for list item, home link -->
+        <a href="/" style="font-size: 32px; font-family: arial, serif; "><strong>Home</strong></a>
+      </li><br />
+      <li>      <!-- link to gibson page -->
+        <a href="/gibson/">
+          <img src="/images/Gibson_Logo.svg" alt="Gibson Logo" style="width:80px;height:35px;">        <!-- clickable image used as link instead of text-->
+        </a>
+      </li><br />
+      <li>      <!-- link to fender page -->
+        <a href="/fender/">
+          <img src="/images/fender_logo_black.svg" alt="Gibson Logo" style="width:80px;height:35px;">  <!-- clickable image used as link instead of text-->
+        </a>
+      </li>
+      <li>
+        <a href="contact.html" style="font-size: 32px; font-family: arial, serif; "><strong>Survey</strong></a> <!-- link to survey page -->
+      </li><br />
+    </ul>
+  </div>
+
+  <div class="container">                               <!-- different div section for page body -->
+    <h1>Battle of the brands</h1>                       <!-- header acting as a page title -->
+    <h2>Main Differences Between Fender vs Gibson</h2>  <!-- smaller header acting as a title for the section -->
+    <ul style="width:75%;"><strong> <!-- unordered list to separate different points, width adjusted because it was too big I thought-->
+                                    <!-- list items to form page body, wrapped in <strong> tag to make it bold and a bit more stand-out on the page -->
+        <li>Fender electric guitars use mostly single-coil pickups, whereas Gibson guitars feature mostly Humbucker
+          style pickups or
+          similar ones such as P90s. The brands design is drastically different where the elements that stand out
+          immediately are the
+          body shapes, scale length, neck, and headstock.</li>
+        <li>The “Fender tone” generally refers to a bright, woody with lots of attack, whereas Gibson is mostly known
+          for its guitars warm tone.</li>
+        <li>Both guitars can be used in similar settings in blues and rock; however, Fenders are used more in modern
+          music, country, funk,
+          and overall where a lower gain brighter tone is needed, whereas Gibsons tend to be more friendly to high gain
+          and are used more
+          in hard rock. The warm tone makes them more friendly to jazz guitarists.</li>
+        <li>Fender uses lightweight Ash and Alder, while Gibson uses Mahogany, whereas Gibsons are generally heavier
+          than Fenders due to the
+          different tonewoods used in the build.</li>
+        <li>The shorter scale length and neck profile give both guitars a different feel where Gibsons are generally
+          easier to play. This,
+          however, depends mostly on the style and taste.</li>
+        <li>Fender has more affordable models in its main series of guitars, whereas High-end Gibsons tend to be more
+          expensive than Fenders</li>
+    </ul></strong>
+    <img src="/images/lp_vs_strat.jpg"> <!-- image below body following the main idea-->
+  </div>
+  <div class="background-image"></div>  <!-- extra div to make use of the css jargon for the background images -->
+</body>
+
+
+
+<!-- previously mentioned CSS jargon-->
+<!-- I know the assignment said to only use HTML, but I had a certain idea in my head and it had to be at least half-baked-->
+<style>
+  /* li tag to give slight overlay to list items to be more readable over background*/
+  li {
+    color: black;
+    background-color: rgba(192, 192, 192, 0.4);
+  }
+
+  /* container class to set everything else above background */
+  .container {
+    position: relative;
+    /* Ensure the container is positioned relatively */
+    z-index: 1;
+    /* Set a higher z-index to place it above the background image */
+  }
+
+  /* background image class used to add alpha transparancy because I was too lazy to edit the images manually,
+  plus it's more dynamic so thats cool */
+  .background-image {
+    position: absolute;
+    top: 0;         /* position top and left, absolute (forcefully, forget your feelings if you're a random div container in my way) */
+    left: 0;
+    width: 100%;    /* stretch image to 100% of page size both vertical and horizontal */
+    height: 100%;
+    background-image: url('/images/GibsonVsFender-C0C0C0.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 75% 75%;  /* sets image to 75% of orignal size both directions */
+    background-position: center;
+    opacity: 0.1;  /* sets opacity to 10% (90% see through) */
+                   /* Adjust the opacity as needed (0 to 1) */
+                   /* You can also use rgba or hexadecimal notation for the background color with alpha channel here */
+                   /* Other background properties such as background-repeat, background-size, etc. can be added here as well */
+    
+    z-index: 0; /* that forceful remark was just teasing. I'll step aside now because I'm actually nice */
+                /* Set a lower z-index to place it below (underneath) the container (class) */
+  }
+</style>
+
+</html>

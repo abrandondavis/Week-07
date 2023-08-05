@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Required metadata stuff -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gibson</title>
+</head>
+
+
+<!--
+##################################
+Most comments are on either the main page index or contact page files
+Some copypasta was done here, but for the interest of both of our time, mostly unique stuff to this page is commented
+##################################
+-->
+<!-- Meat and bones of the html file -->
+
+<body style="background-color: silver;">      <!-- Main body of html file-->
+  <div class="container">                       <!-- links on page -->
+    <ul>                                        <!-- ul for unordered list, used to list links -->
+      <li>                                      <!-- li for list item, home link -->
+        <a href="/" style="font-size: 32px; font-family: arial, sans-serif; "><strong>Home</strong></a>
+      </li><br />
+      <li>
+        <a href="/gibson/">
+          <img src="/images/Gibson_Logo.svg" alt="Gibson Logo" style="width:80px;height:35px;">
+        </a>
+      </li><br />
+      <li>
+        <a href="/fender/">
+          <img src="/images/fender_logo_black.svg" alt="Gibson Logo" style="width:80px;height:35px;">
+        </a>
+      </li>
+      <li>
+        <a href="/contact.html" style="font-size: 32px; font-family: arial, serif; "><strong>Survey</strong></a>
+      </li><br />
+    </ul>
+  </div>
+
+  <div class="container">       <!-- div for table-->
+    <h3>Guitar Models</h3>      <!-- table title header, size 3 with socks to match -->
+    <table>                     <!-- container for the table headers, rows, and data -->
+      <tr>                      <!-- first table row -->
+        <th>Model</th>          <!-- <th> for table head used to lead each row and is also bolded by default -->
+        <th>Year</th>
+      </tr>
+      <tr>                      <!-- <tr> assigns a new table row -->
+        <td>Les Paul</td>       <!-- <td> is table data for each part of the table row-->
+        <td>1952</td>           <!-- Make sure to get the info in the right order or it defeats the point of the table headers -->
+      </tr>
+      <tr>
+        <td>SG</td>
+        <td>1961</td>
+      </tr>
+      <tr>
+        <td>ES-335</td>
+        <td>1958</td>
+      </tr>
+      <tr>
+        <td>Flying V</td>
+        <td>1958</td>
+      </tr>
+      <tr>
+        <td>Explorer</td>
+        <td>1958</td>
+      </tr>
+    </table>
+    <img src="/images/gibson_memphis_black_beauty.jpg" style="width:150px;">
+  </div>
+
+  <div class="background-image"></div> <!-- BG Image Container-->
+
+
+</body>
+
+
+
+
+<style>
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/Gibson_Logo.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 75% 75%;
+    background-position: center;
+    opacity: 0.1;
+    /* Adjust the opacity as needed (0 to 1) */
+    /* You can also use rgba or hexadecimal notation for the background color with alpha channel here */
+    /* Other background properties such as background-repeat, background-size, etc. can be added here as well */
+    z-index: 0;
+    /* Set a lower z-index to place it below the container */
+  }
+
+  .container {
+    position: relative;
+    /* Ensure the container is positioned relatively */
+    z-index: 1;
+    /* Set a higher z-index to place it above the background image */
+  }
+
+  li {
+    color: black;
+    background-color: rgba(192, 192, 192, 0.4);
+  }
+</style>
+
+</html>
